@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 Check our our website! 
-⬇️
+➡️
 https://bluedrop-web.github.io/BlueDrop-web/ 
 <!--
 **BlueDrop-web/BlueDrop-web** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
