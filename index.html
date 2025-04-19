@@ -1486,6 +1486,8 @@
          <p>&copy; <span id="currentYear"></span> BlueDrop. All rights reserved.</p>
   </footer>
   <script>
+  // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
