@@ -705,6 +705,145 @@
       object-fit: cover;
     }
 
+    /* Testimonials Section */
+    .testimonials {
+      background-color: #f0fdff;
+      padding: 6rem 0;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .testimonials-header h2 {
+      font-size: 2.5rem;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials-header p {
+      font-size: 1.25rem;
+      color: #4b5563;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-color: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #06b6d4;
+    }
+
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #1f2937;
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-occupation {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-toggle {
+      background-color: #ecfeff;
+      color: #0e7490;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .testimonial-toggle:hover {
+      background-color: #cffafe;
+    }
+
+    .testimonial-toggle svg {
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-toggle.active svg {
+      transform: rotate(180deg);
+    }
+
+    .testimonial-quote {
+      display: none;
+      margin-top: 1.5rem;
+      color: #4b5563;
+      font-style: italic;
+      line-height: 1.6;
+      position: relative;
+      padding: 0 1.5rem;
+    }
+
+    .testimonial-quote.active {
+      display: block;
+    }
+
+    .testimonial-quote::before,
+    .testimonial-quote::after {
+      content: '"';
+      font-size: 2rem;
+      color: #06b6d4;
+      opacity: 0.3;
+      position: absolute;
+    }
+
+    .testimonial-quote::before {
+      top: -1rem;
+      left: 0;
+    }
+
+    .testimonial-quote::after {
+      bottom: -1.5rem;
+      right: 0;
+    }
+
+    @media (min-width: 640px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
     /* Founder Section */
     .founder {
       background: linear-gradient(to bottom, white, #f0fdff);
@@ -1328,6 +1467,77 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="testimonials-header">
+        <h2>What People Say</h2>
+        <p>Hear from those who have experienced our solution</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="testimonial-image">
+          <h3 class="testimonial-name">Sarah Johnson</h3>
+          <p class="testimonial-occupation">Community Leader</p>
+          <button class="testimonial-toggle" data-toggle="testimonial-1">
+            Read Testimonial
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="testimonial-quote" id="testimonial-1">
+            "The BlueDrop system has transformed our village's access to clean water. What used to be a daily struggle has become effortless. Our children are healthier, and our community is thriving."
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez" class="testimonial-image">
+          <h3 class="testimonial-name">Michael Rodriguez</h3>
+          <p class="testimonial-occupation">NGO Director</p>
+          <button class="testimonial-toggle" data-toggle="testimonial-2">
+            Read Testimonial
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="testimonial-quote" id="testimonial-2">
+            "We've implemented BlueDrop systems in three different communities with outstanding results. The simplicity of installation and maintenance makes it perfect for remote areas. I highly recommend this innovative solution."
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amina Patel" class="testimonial-image">
+          <h3 class="testimonial-name">Amina Patel</h3>
+          <p class="testimonial-occupation">Environmental Scientist</p>
+          <button class="testimonial-toggle" data-toggle="testimonial-3">
+            Read Testimonial
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="testimonial-quote" id="testimonial-3">
+            "From a sustainability perspective, BlueDrop is revolutionary. Zero electricity, minimal materials, and a focus on repairability – this is exactly the kind of innovation our planet needs. The water quality results are consistently excellent."
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Okafor" class="testimonial-image">
+          <h3 class="testimonial-name">David Okafor</h3>
+          <p class="testimonial-occupation">School Principal</p>
+          <button class="testimonial-toggle" data-toggle="testimonial-4">
+            Read Testimonial
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="testimonial-quote" id="testimonial-4">
+            "Since installing the BlueDrop system at our school, student attendance has improved dramatically. Children who used to spend hours collecting water now have time for education. The impact goes far beyond just clean water."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Founder Section -->
   <section class="founder section" id="founder">
     <div class="container">
@@ -1575,6 +1785,27 @@
         }
       });
     }
+
+    // Testimonial toggles
+    document.querySelectorAll('.testimonial-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const targetId = toggle.getAttribute('data-toggle');
+        const quoteElement = document.getElementById(targetId);
+        
+        // Toggle active class on the quote
+        quoteElement.classList.toggle('active');
+        
+        // Toggle active class on the button
+        toggle.classList.toggle('active');
+        
+        // Change button text
+        if (toggle.classList.contains('active')) {
+          toggle.innerHTML = `Hide Testimonial <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>`;
+        } else {
+          toggle.innerHTML = `Read Testimonial <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+        }
+      });
+    });
   </script>
 </body>
 </html>
